@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
+			<div class="wrap-login100">
+				<form class="login100-form validate-form">
+					<span class="login100-form-logo">
+						<i class="zmdi zmdi-landscape"></i>
+					</span>
+
+					<span class="login100-form-title p-b-34 p-t-27">
+						Log in
+					</span>
+
+					<div class="wrap-input100 validate-input" data-validate = "Enter username">
+						<input class="input100" type="text" id="email" name="username" placeholder="Username">
+						<span class="focus-input100" data-placeholder="&#xf207;"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Enter password">
+						<input class="input100" id="password" type="password" name="pass" placeholder="Password">
+						<span class="focus-input100" data-placeholder="&#xf191;"></span>
+					</div>
+
+					<div class="contact100-form-checkbox">
+						<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+						<label class="label-checkbox100" for="ckb1">
+							Remember me
+						</label>
+					</div>
+
+					<div class="container-login100-form-btn">
+						<button onclick="sign()" class="login100-form-btn">
+							Sign in
+						</button>
+					</div>
+
+					<div class="container-login100-form-btn" style="margin-top: 5%">
+						<button onclick="login()" class="login100-form-btn">
+						<a  id="link" style="text-decoration: none;font-weight: bold;">Login</a>
+						</button>
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</div>
+	
+
+	<div id="dropDownSelect1"></div>
+	
+
+
+</body>
+
+<script>
+var email = document.getElementById("email");
+var password = document.getElementById("password");
+
+
+function sign(){
+    var users = localStorage.getItem("data");
+    console.log(users);
+
+    var flag = "no";
+
+    if(users === null){
+        users = [];
+    }
+    else{
+        users = JSON.parse(users);
+        console.log(users);
+    }
+
+    var data ={
+        email : email.value,
+         password: password.value,
+    } 
+
+    for(var i =0; i< users.length ; i++){
+        if(users[i].email === email.value){
+            console.log(email.value)
+            flag = "yes";
+        }
+    }
+        if(flag === "yes"){
+            alert("User is already Exists");
+        }
+        else{
+            users.push(data);
+            users = JSON.stringify(users);
+            localStorage.setItem("data", users);
+
+            email.value = "";
+    password.value = "";
+
+    alert("Sign up Successfully")
+        } 
+}
+function login(){
+    var users = localStorage.getItem("data");
+    console.log(users);
+
+    var flag = "no";
+    var data ={
+        email : email.value,
+         password: password.value,
+    } 
+    if(users === null){
+        users = [];
+    }
+    else{
+        users = JSON.parse(users);
+        console.log(users);
+    }
+
+    for(var i=0; i<users.length; i++){
+        if(users[i].email === email.value && users[i].password === password.value){
+            flag = "yes";
+        }
+	}
+    if(flag === "no"){
+        alert("Email invalid");
+        email.value = "";
+        password.value = "";
+    }
+    else{
+        for(var i=0; i< email.value.length; i++){
+        if(email.value.slice(i, i+4) === ".com"){
+        alert("login Successfully");
+        email.value = "";
+var data2= JSON.stringify(data);
+        password.value = "";
+localStorage.setItem("data2", data2);
+        var x = document.getElementById("link").href = "intro task/index.html"; 
+    }
+    }
+    
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>

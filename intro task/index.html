@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+
+    <!-- Title Page-->
+    <title>Annual Saylani Thar Student </title>
+    <!-- Main CSS-->
+    <link href="css/main.css" rel="stylesheet" media="all">
+    <style>
+    #user,#logout{
+        background: #7baad5;
+        padding: 5px;
+        border-radius: 10px;
+        margin-top: 1%;
+        font-size: 20px;
+        
+    }
+    </style>
+</head>
+
+<body style="background: #2c6ed5">
+    <div style="margin-left: 70%"><button id="user" style="color:white"></button>
+        <a onclick="logout()" href="#" ><button id="logout">Logout</button></a>
+        
+</div>
+    <div class="page-wrapper bg-blue p-t-100 p-b-100 font-robo">
+        <div class="wrapper wrapper--w680">
+            <div class="card card-1">
+                <div class="card-heading"></div>
+                <div class="card-body">
+                    <h2 class="title">ADD Details</h2>
+                    <form method="POST">
+                        <div class="input-group">
+                            <input class="input--style-1" id="name" type="text" placeholder="NAME" name="name">
+                        </div>
+                        <div class="row row-space">
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <input class="input--style-1 js-datepicker" id="rollNo" type="text" placeholder="Roll No" name="birthday">
+                                        <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
+                                    </div>
+                                </div>
+                        <div class="col-2">
+                            <div class="input-group">
+                                <div class="rs-select2 js-select-simple select--no-search">
+                                    <input class="input--style-1" type="text" id="sub1" placeholder="Sub1(marks)" name="res_code">
+                                    <div class="select-dropdown"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-2">
+                            <div class="input-group">
+                                <div class="rs-select2 js-select-simple select--no-search">
+                                    <input class="input--style-1" type="text" id="sub2" placeholder="Sub2(marks)" name="res_code">
+                                    <div class="select-dropdown"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-2">
+                            <div class="input-group">
+                                <div class="rs-select2 js-select-simple select--no-search">
+                                    <input class="input--style-1" type="text" id="sub3" placeholder="Sub3(marks)" name="res_code">
+                                    <div class="select-dropdown"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-2">
+                            <div class="input-group">
+                                <div class="rs-select2 js-select-simple select--no-search">
+                                    <input class="input--style-1" type="text" id="sub4" placeholder="Sub4(marks)" name="res_code">
+                                    <div class="select-dropdown"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-2">
+                            <div class="input-group">
+                                <div class="rs-select2 js-select-simple select--no-search">
+                                    <input class="input--style-1" type="text" id="sub5" placeholder="Sub5(marks)" name="res_code">
+                                    <div class="select-dropdown"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                        <!-- <div class="input-group">
+                            <input class="input--style-1" type="text" id="subject" placeholder="Subjects" name="Subject">
+                        </div> -->
+                        <div class="row row-space">
+                        <div class="p-t-20">
+                            <button class="btn btn--radius btn--green" onclick="func()" type="button">Submit</button>
+                        </div>
+                    </form>
+                </div>
+                    <div style="padding-left:30%;color: red;font-weight: bold;padding-bottom: 1%" class="card-body">
+                        <h2 class="title">SEARCH ID</h2>
+                    </div>   
+                    <div class="col-2">
+                            <div class="input-group">
+                            <input class="input--style-1 js-datepicker" id="rollNo2" type="text" placeholder="Roll No" name="birthday">
+                            <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
+                        </div>
+                    </div>
+                    <div class="p-t-20">
+                    <button class="btn btn--radius btn--green" onclick="func2()" type="button">Search</button>
+                </div>
+                <div class="card-body" style="padding-left:2%;">
+                    <h2 class="title">Student Details</h2>
+                    <form method="POST">
+                        <div class="input-group">
+                            <input class="input--style-1" id="name2" type="text" placeholder="NAME" name="name">
+                        </div>
+                        <div class="row row-space">
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <input class="input--style-1 js-datepicker" id="rollNo3" type="text" placeholder="Roll No" name="birthday">
+                                        <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
+                                    </div>
+                                </div>
+                        <div class="col-2">
+                            <div class="input-group">
+                                <div class="rs-select2 js-select-simple select--no-search">
+                                    <input class="input--style-1" type="text" id="mark2" placeholder="Percentage%" name="res_code">
+                                    <div class="select-dropdown"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-2">
+                            <div class="input-group">
+                                <div class="rs-select2 js-select-simple select--no-search">
+                                    <input class="input--style-1" type="text" id="sub12" placeholder="Sub1" name="res_code">
+                                    <div class="select-dropdown"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-2">
+                            <div class="input-group">
+                                <div class="rs-select2 js-select-simple select--no-search">
+                                    <input class="input--style-1" type="text" id="sub22" placeholder="Sub2" name="res_code">
+                                    <div class="select-dropdown"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-2">
+                            <div class="input-group">
+                                <div class="rs-select2 js-select-simple select--no-search">
+                                    <input class="input--style-1" type="text" id="sub32" placeholder="Sub3" name="res_code">
+                                    <div class="select-dropdown"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-2">
+                            <div class="input-group">
+                                <div class="rs-select2 js-select-simple select--no-search">
+                                    <input class="input--style-1" type="text" id="sub42" placeholder="Sub4" name="res_code">
+                                    <div class="select-dropdown"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-2">
+                            <div class="input-group">
+                                <div class="rs-select2 js-select-simple select--no-search">
+                                    <input class="input--style-1" type="text" id="sub52" placeholder="Sub5" name="res_code">
+                                    <div class="select-dropdown"></div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+
+
+ 
+                    </form>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script>
+
+
+
+
+// var Students = prompt("How many Student's in your Class?","10");
+
+var array = [];
+var value;
+var percnt;
+function Details(name,rollNo,sub1,sub2,sub3,sub4,sub5){
+        this.Name = name;
+        this.RollNo = rollNo;
+        this.Sub1 = sub1;
+        this.Sub2 = sub2;
+        this.Sub3 = sub3;
+        this.Sub4 = sub4;
+        this.Sub5 = sub5;
+        this.percnt ;
+    }
+
+function func(){
+     value = new Details(document.getElementById("name").value,document.getElementById("rollNo").value,document.getElementById("sub1").value,
+     document.getElementById("sub2").value,document.getElementById("sub3").value,document.getElementById("sub4").value,document.getElementById("sub5").value,);
+
+    console.log(value);
+
+    
+    array.push(value);
+    console.log(array)
+}
+
+
+
+function func2(){
+    var flag = "no";
+        for(var i = 0; i < array.length;i++){
+        if(array[i].RollNo === document.getElementById("rollNo2").value){
+            flag = "yes";
+            var sub1 = Number(array[i].Sub1);
+            var sub2 = Number(array[i].Sub2);
+            var sub3 = Number(array[i].Sub3);
+            var sub4 = Number(array[i].Sub4);
+            var sub5 = Number(array[i].Sub5);
+          percnt = (sub1+sub2+sub3+sub4+sub5) * 100 / 500;
+        console.log(array[i]," Percentage is ",percnt);
+         document.getElementById("name2").value = array[i].Name;
+         document.getElementById("rollNo3").value = array[i].RollNo;
+         document.getElementById("mark2").value = percnt + "%";
+         document.getElementById("sub12").value = array[i].Sub1;
+         document.getElementById("sub22").value = array[i].Sub2;
+         document.getElementById("sub32").value = array[i].Sub3;
+         document.getElementById("sub42").value = array[i].Sub4;
+         document.getElementById("sub52").value = array[i].Sub5;
+
+        }
+        else if(flag === "no"){
+            alert("Your Roll no not Correct")
+        }
+        }
+}
+
+var user = localStorage.getItem('data2')
+console.log(user);
+
+var user = JSON.parse(user);
+var x = user.email.slice(0,-10);
+
+document.getElementById("user").innerHTML = x;
+
+function logout(){
+    localStorage.removeItem("data");
+    window.location.href = "../index.html"
+}
+
+
+</script>
+
+</html>
